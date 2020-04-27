@@ -1,0 +1,45 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Min första visualisering</title>
+    <script src="https://d3js.org/d3.v4.js"></script>
+</head>
+<body>
+
+<h1>Tidsresor med enter()</h1>
+
+
+<script>
+
+    //Höjden på rektanglar i barcharten
+    var dataTable = [30, 50, 70, 80];
+
+    //skapa ett ritunderlag
+    var canvas = d3.select("body")
+        .append("svg")
+        .attr("width", 400)
+        .attr("height", 200);
+
+
+    //här börjar tidsresan
+    canvas.selectAll("staplar")
+        .data(dataTable) //Fyll virtuella staplar med data från databales array
+
+        //Gå in i varje virtuella stapel
+        .enter() //first (i=0 idata.length; i++)
+        .append("rect")
+        .attr("height", 80)
+        //bredden av rektangeln = värdet från datatabellen
+        .attr("width", function (data) {return data;})
+        //första rektabgekb x = 100*0, x2 == 100*1 ...
+        .attr("ý", function (data, i) {return 50* i;})
+        .attr.xunits;
+
+</script>
+
+</body>
+</html>
