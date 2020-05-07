@@ -16,6 +16,7 @@ function drawChart() {
             months.push(data[i].Month);
             temps.push(data[i].Temp);
         }
+        
         console.log(temps);
         console.log(months);
     });
