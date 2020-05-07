@@ -35,7 +35,7 @@ var canvas = d3.select("body")
 
 //här börjar tidsresan
 canvas.selectAll("staplar").data(dataTable) //Fyll virtuella staplar med data från databales array
-
+    //Skapar virtuella element med __data__ = dataTable[0] för första elementet osv.
     //Gå in i varje virtuella stapel
     .enter() //first (i=0 idata.length; i++)
     .append("rect")
