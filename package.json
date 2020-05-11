@@ -9,5 +9,8 @@
     "gulp-util": "^3.0.8",
     "gulp-webserver": "^0.9.1"
   },
-  "author": "Ray Villalobos"
+  "author": "Ray Villalobos",
+  "dependencies": {
+    "jshint": "^2.11.0"
+  }
 }
